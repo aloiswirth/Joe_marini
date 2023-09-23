@@ -4,13 +4,13 @@ from PIL import Image, ImageFilter, ImageOps
 
 # TODO: use the crop function to crop an image
 infile = "ImagesArchive/Connections.jpeg"
-# with Image.open(infile) as img:
-#     # calculate the middle part
-#     midx = img.width / 2
-#     midy = img.height / 2
-#     croparea = (midy-400, midx-250, midy+400, midx+250)
-#     cropimg = img.crop(croparea)
-#     cropimg.show()
+with Image.open(infile) as img:
+    # calculate the middle part
+    midx = img.width / 2
+    midy = img.height / 2
+    croparea = (midy-400, midx-250, midy+400, midx+250)
+    cropimg = img.crop(croparea)
+    cropimg.show()
 
 # TODO: perform a simple resize and rotation
 # with Image.open(infile) as img:
