@@ -8,11 +8,11 @@ import os
 # define a thumbnail size
 thumbsize = (128, 128)
 
-images = glob.glob("ImagesArchive/*.*")
+images = glob.glob("c:/SAPDevelop/git_extern/Joe_marini/essential_libraries/Pillow/ImagesArchive/*.*")
 for image in images:
     if image.endswith(".jpeg") or image.endswith(".png") or image.endswith(".gif"):
         fn = os.path.basename(image)
         filename, ext = os.path.splitext(fn)
         with Image.open(image) as imgfile:
             imgfile.thumbnail(thumbsize)
-            imgfile.save("ImagesArchive/" + filename + ".thumb" + ext)
+            imgfile.save("c:/SAPDevelop/git_extern/Joe_marini/essential_libraries/Pillow/ImagesArchive/" + filename + ".thumb" + ext)
